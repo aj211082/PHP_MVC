@@ -1,5 +1,8 @@
 <?php
 
+// Database class
+// Use PDO library
+
 class Database
 {
 
@@ -14,6 +17,9 @@ class Database
 
     }
 
+    /**
+     * @return null
+     */
     public function getConnection()
     {
         return $this->db_connection;
@@ -28,11 +34,19 @@ class Database
         return json_encode($array);
     }
 
+    /**
+     * @param $data
+     * @return bool
+     */
     public function insertData($data)
     {
         return false;
     }
 
+    /**
+     * @param $data
+     * @return bool
+     */
     public function deleteData($data)
     {
         if(empty($data)) {
